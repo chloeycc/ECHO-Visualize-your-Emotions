@@ -131,9 +131,9 @@ function drawHome() {
   drawStartButton();
 
   fill(255);
-  textSize(14);
+  textSize(16);
   text(
-    "Generate a character with emotion combinations Happy, Sad, & Angry OR Jealous, Angry, & Anxious",
+    "Generate a character with emotion combos Happy, Sad, & Angry OR Jealous, Angry, & Anxious",
     width / 2,
     height / 2 + 200
   );
@@ -188,7 +188,7 @@ function mousePressed() {
 
 function drawApp() {
   background(20, 20, 40);
-
+  
   if (emotions.length === 3 && !showAnimal) {
   generateButton.show();
 } else {
@@ -278,7 +278,7 @@ for (let e of emotions) {
         let sx = dot.x + cos(angle) * radius;
         let sy = dot.y + sin(angle) * radius;
 
-        fill(255, 255, 200, 120);
+        fill(dot.color);
         circle(sx, sy, random(2, 5));
       }
     }
@@ -404,7 +404,7 @@ function addEmotion() {
         size: random(10, 25),
         xSpeed: random(-0.3, 0.3),
         ySpeed: random(-0.3, 0.3),
-        color: randomYellow(),
+        color: randomHappy(),
         twinkleSpeed: random(0.02, 0.05),
         twinkleOffset: random(1000),
       });
@@ -501,8 +501,8 @@ function resetApp() {
 
 
 // COLORS
-function randomYellow() {
-  return color(255, random(200, 255), 0, 120);
+function randomHappy() {
+ return color(255, random(230, 255), 100, 255);
 }
 function randomSad() {
   return color(random(0, 50), random(0, 70), random(180, 255), 100);
