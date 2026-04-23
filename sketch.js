@@ -133,7 +133,7 @@ function drawHome() {
   fill(255);
   textSize(16);
   text(
-    "Generate a character with emotion combos Happy, Sad, & Angry OR Jealous, Angry, & Anxious",
+    "Generate a character with emotion combinations Happy, Sad, & Angry OR Jealous, Angry, & Anxious",
     width / 2,
     height / 2 + 200
   );
