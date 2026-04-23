@@ -182,14 +182,18 @@ function mousePressed() {
       input.show();
       button.show();
       intensitySlider.show();
-      generateButton.show();
     }
   }
 }
 
 function drawApp() {
   background(20, 20, 40);
-  
+
+  if (emotions.length === 3 && !showAnimal) {
+  generateButton.show();
+} else {
+  generateButton.hide();
+}
   if (showAnimal) {
   resetButton.show();
 } else {
